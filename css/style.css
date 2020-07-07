@@ -1,11 +1,6 @@
 @import url(reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css');
-/* 
-font-family: 'Handlee', cursive;
-font-family: 'Montserrat', sans-serif; 
-*/
-
 * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -16,9 +11,10 @@ font-family: 'Montserrat', sans-serif;
 
 :root {
     --color-principal: #fa573a;
-    --color-secundario: #21242e; 
-    --fuentePrincipal: 'Montserrat', sans-serif; 
+    --color-secundario: #21242e;
+    --fuentePrincipal: 'Montserrat', sans-serif;
     --fuenteSecundaria: 'Handlee', cursive;
+    --anchoMaximo: 1100px;
 }
 
 body {
@@ -32,4 +28,127 @@ img {
     display: block;
 }
 
+.container {
+    max-width: var(--anchoMaximo);
+    margin: 0 auto;
+}
 
+.flex {
+    display: flex;
+}
+
+/* inicio header */
+
+header .nav_top {
+    background-color: var(--color-secundario);
+    padding: 20px 10px;
+}
+
+header .nav_top a {
+    color: white;
+    text-decoration: none;
+    font-size: 120%;
+}
+
+header .nav_top span {
+    display: none;
+}
+
+header .nav_top .flex {
+    justify-content: space-between;
+}
+
+header .nav_top i {
+    color: var(--color-principal);
+}
+
+header nav {
+    padding: 20px;
+}
+
+header .logo {
+    max-width: 110px;
+}
+
+header .hamburguesa {
+    width: 50px;
+    cursor: pointer;
+}
+
+header .hamburguesa div {
+    border-top: 2px solid #aaa;
+    margin: 10px;
+}
+
+header nav .flex {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header nav ul {
+    width: 100%;
+}
+
+header nav ul li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+    border-bottom: 1px solid #aaa;
+    color: #aaa;
+    transition: 1s;
+}
+
+header nav ul li .activo {
+    color: var(--color-principal);
+}
+
+header nav ul li a:hover {
+    color: var(--color-principal)
+}
+
+/* fin header */
+
+/* inicio footer */
+
+footer {
+    background-color: var(--color-secundario);
+    padding: 1.250em 0.625em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p, footer a {
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+/* fin footer */
+
+@media(min-width: 48em) {
+    header .nav_top span {
+        display: inline;
+    }
+    footer {
+        text-align: left;
+    }
+}
+
+@media(min-width: 62.750em) {
+    header .hamburguesa {
+        display: none;
+    }
+    header nav ul {
+        width: auto;
+        display: flex;
+    }
+    header nav ul li a {
+        padding: 5px 20px;
+        border-bottom: 0px;
+    }
+}
