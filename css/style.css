@@ -318,4 +318,50 @@ main #ourservices .flex article h3 {
     }
 }
 
+/* Fin sección our services */
+
+/* Inicio sección about us */
+
+main #aboutus .flex {
+    flex-direction: column;
+}
+
+main #aboutus .flex .column {
+    padding: 0.825em;
+}
+
+main #aboutus .flex .column h3 {
+    font-weight: 700;
+}
+
+main #aboutus .flex .column h4 {
+    color: var(--color-principal);
+    margin: 1em o;
+}
+
+main #aboutus .marco {
+    border: 3px solid var(--color-principal);
+    transform: rotateZ(10deg);
+    width: 90%;
+    margin: 0 auto;
+    transition: 1s;
+}
+
+main #aboutus .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main #aboutus .columna:hover .marco, main #aboutus .columna:hover img {
+    transform: rotateZ(0deg);
+}
+
+@media(min-width: 48.00em) {
+    main #aboutus .flex {
+        flex-direction: row;
+    }
+}
+
+/* Fin sección about us */
+
 /* Fin main */
