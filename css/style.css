@@ -1,6 +1,6 @@
 @import url(reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css");
 * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -13,7 +13,7 @@
     --color-principal: #fa573a;
     --color-secundario: #21242e;
     --fuentePrincipal: 'Montserrat', sans-serif;
-    --fuenteSecundaria: 'Handlee', cursive;
+    --fuenteSecundario: 'Handlee', cursive;
     --anchoMaximo: 1100px;
 }
 
@@ -50,7 +50,7 @@ header .nav_top a {
     font-size: 120%;
 }
 
-header .nav_top span {
+header .nav_top a span {
     display: none;
 }
 
@@ -104,7 +104,7 @@ header nav ul li .activo {
 }
 
 header nav ul li a:hover {
-    color: var(--color-principal)
+    color: var(--color-principal);
 }
 
 /* Fin header */
@@ -121,7 +121,7 @@ footer {
 }
 
 footer p, footer a {
-    color: white;
+    color: white
 }
 
 footer a:hover {
@@ -130,8 +130,8 @@ footer a:hover {
 
 /* Fin footer */
 
-@media(min-width: 48em) {
-    header .nav_top span {
+@media(min-width: 48.000em) {
+    header .nav_top a span {
         display: inline;
     }
     footer {
@@ -157,23 +157,23 @@ footer a:hover {
 
 .hero {
     background-image: url('../images/fondo.jpg');
-    height: 70vh;
+    height: 50vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    background-color: #777;
+    background-color: #999;
     background-blend-mode: multiply;
     display: flex;
     align-items: center;
 }
 
 .hero .container {
-    width: 80%;
+    width: 90%;
 }
 
 .hero h1 {
-    font-family: var(--fuenteSecundaria);
-    font-size: 2.5em;
+    font-family: var(--fuenteSecundario);
+    font-size: 2.50em;
     color: white;
 }
 
@@ -224,7 +224,9 @@ footer a:hover {
 
 /* Fin hero */
 
-/* Inicio main */
+/* Inicio Main HOME */
+
+/* Inicio seccion ourservices */
 
 main {
     margin-bottom: 90px;
@@ -236,7 +238,7 @@ main section {
 
 main section h2 {
     color: black;
-    font-family: var(--fuenteSecundaria);
+    font-family: var(--fuenteSecundario);
     font-size: 2em;
     text-align: center;
 }
@@ -296,7 +298,7 @@ main #ourservices .flex article h3 {
     color: var(--color-principal);
 }
 
-@media(min-width: 48em) {
+@media(min-width: 48.000em) {
     main #ourservices .flex article {
         width: 50%;
         padding: 1.825em;
@@ -318,25 +320,25 @@ main #ourservices .flex article h3 {
     }
 }
 
-/* Fin sección our services */
+/* Fin seccion our services */
 
-/* Inicio sección about us */
+/* Inicio seccion about us */
 
 main #aboutus .flex {
     flex-direction: column;
 }
 
-main #aboutus .flex .column {
+main #aboutus .flex .columna {
     padding: 0.825em;
 }
 
-main #aboutus .flex .column h3 {
+main #aboutus .flex .columna h3 {
     font-weight: 700;
 }
 
-main #aboutus .flex .column h4 {
+main #aboutus .flex .columna h4 {
     color: var(--color-principal);
-    margin: 1em o;
+    margin: 1em 0;
 }
 
 main #aboutus .marco {
@@ -356,12 +358,65 @@ main #aboutus .columna:hover .marco, main #aboutus .columna:hover img {
     transform: rotateZ(0deg);
 }
 
-@media(min-width: 48.00em) {
+@media(min-width: 48.000em) {
     main #aboutus .flex {
         flex-direction: row;
     }
 }
 
-/* Fin sección about us */
+/* Fin seccion about us */
 
-/* Fin main */
+/* Fin main HOME */
+
+/* Inicio main BLOG */
+
+/* Inicio seccion blogs */
+
+main #ourblogs .flex {
+    flex-wrap: wrap;
+    padding: 0 0.825em;
+}
+
+main #ourblogs .flex article {
+    width: 50%;
+    padding: 1.825em;
+    border-bottom: 0px;
+    margin-bottom: 1em;
+}
+
+main #ourblogs .flex article h3 {
+    font-weight: 700;
+    margin: 1em 0;
+}
+
+main #ourblogs .flex article h4 {
+    color: var(--color-principal);
+    font-weight: 700;
+    margin: 1em 0;
+}
+
+main #ourblogs .flex article .fecha {
+    display: flex;
+    position: absolute;
+    background-color: rgba(250, 87, 58, 0.7);
+    width: 3.750em;
+    height: 3.750em;
+}
+
+main #ourblogs .flex article .fecha h3 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-size: 19px;
+}
+
+@media(min-width: 48.000em) {
+    main #ourblogs .flex article {
+        width: 33.33%;
+    }
+}
+
+/* Fin seccion blogs */
+
+/* Fin main BLOG */
