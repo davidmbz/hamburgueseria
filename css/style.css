@@ -370,8 +370,6 @@ main #aboutus .columna:hover .marco, main #aboutus .columna:hover img {
 
 /* Inicio main BLOG */
 
-/* Inicio seccion blogs */
-
 main #ourblogs .flex {
     flex-wrap: wrap;
     padding: 0 0.825em;
@@ -417,6 +415,103 @@ main #ourblogs .flex article .fecha h3 {
     }
 }
 
-/* Fin seccion blogs */
-
 /* Fin main BLOG */
+
+/* Inicio main MENU */
+
+main #todaysmenu {
+    background-color: var(--color-secundario);
+    color: white;
+    font-size: 12px;
+}
+
+main #todaysmenu .container {
+    max-width: 400px;
+}
+
+main #todaysmenu h2 {
+    color: white;
+}
+
+main #todaysmenu h4, a {
+    font-weight: 700;
+    margin: 1em 0;
+}
+
+main #todaysmenu p {
+    font-size: 9px;
+    margin: 1em 0;
+}
+
+main #todaysmenu nav .flex {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header nav ul {
+    width: 100%;
+}
+
+main #todaysmenu nav ul li a {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+    font-size: 10px;
+}
+
+main #todaysmenu nav ul li .activo {
+    width: 350px;
+    padding: 6px;
+    background-color: var(--color-principal);
+    border-radius: 0.3em;
+}
+
+main #todaysmenu .ofertas .underline {
+    border-bottom: 1px solid var(--color-principal);
+    position: absolute;
+    width: 3em;
+    margin-top: -0.5em;
+}
+
+main #todaysmenu .flex {
+    flex-wrap: wrap;
+    padding: 0 1.5em;
+}
+
+main #todaysmenu .flex article {
+    width: 100%;
+    padding: 1.5em;
+    border-bottom: 0px;
+}
+
+main #todaysmenu .flex article span {
+    padding: 1.825em;
+    color: var(--color-principal);
+}
+
+/* No he sido capaz de encontrar lo que me falla para poder colocar ambas columnas en línea, sé que es por el tamaño de una caja que ocupa todo el ancho, pero por más que he tocado no consigo reducirlo para que se recoloquen las cajas :( */
+
+@media(min-width: 48.000em) {
+    main #todaysmenu .container {
+        max-width: 800px;
+    }
+    main #todaysmenu nav ul li .activo {
+        width: 150px;
+    }
+    main #todaysmenu .ofertas .underline {
+        margin-top: 2.8em;
+    }
+    main #todaysmenu .ofertas {
+        width: 20%;
+    }
+    main #todaysmenu .flex article img {
+        width: 25%;
+        float: left;
+        margin-left: 100px;
+        margin-right: 10px;
+    }
+}
+
+/* Fin main MENU */
